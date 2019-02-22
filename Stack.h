@@ -15,8 +15,7 @@ class Stack
 private:
 	Node<P> * top;	// pointer to the top element
 	int numNodes;	// number of elements in the stack
-					// Helper method
-					// print helper method
+
 	void reversePrintHelper(ostream& outStream, Node<P> *current) const
 	{
 		if (current != nullptr)
@@ -121,14 +120,6 @@ public:
 		return numNodes;
 	}
 
-	//void Stack::ReversePrintStack() const
-	//{
-	//	
-	//	reversePrintHelper(outStream, top);
-	//
-	//}
-
-	// print helper method
 	
 
 	// Operator overload
@@ -156,7 +147,7 @@ public:
 
 
 	// operator overload for equality
-	// Code from our group meet in class sent by Steven Fordham
+	// Code from our group meet in class sent by Steven Fordham heavily modified by me
 	bool operator== (const Stack& rhs) const
 	{
 		// Default to true
@@ -223,13 +214,6 @@ public:
 	~Stack()
 	{
 
-		// //Deconstructor
-		//while (top != nullptr)
-		//{
-		//	pop(); // calls pop until it clears the stack
-
-		//}
-		//cout << "Stack deconstructed." << endl;
 		clearStack();
 		cout << "Stack destructed." << endl;
 
